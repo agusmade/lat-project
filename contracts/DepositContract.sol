@@ -47,7 +47,7 @@ contract DepositContract is IDepositContract, ERC165 {
 		require(msg.value >= 1 ether, "DepositContract: deposit value too low");
 		require(msg.value % 1 gwei == 0, "DepositContract: deposit value not multiple of gwei");
 		uint deposit_amount = msg.value / 1 gwei;
-		require(deposit_amount <= type(uint64).max, "DepositContract: deposit value too high???");
+		require(deposit_amount <= type(uint64).max, "DepositContract: deposit value too high??");
 		bytes memory amount = to_little_endian_64(uint64(deposit_amount));
 		emit DepositEvent(pubkey, withdrawal_credentials, amount, signature, to_little_endian_64(uint64(deposit_count)));
 		bytes32 pubkey_root = sha256(abi.encodePacked(pubkey, bytes16(0)));
