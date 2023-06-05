@@ -1,0 +1,12 @@
+{
+  "repoType": "github",
+  "repoDetails": {
+    "login": "agusmade",
+    "repo": "lat-project",
+    "branch": "master"
+  },
+  "name": "Lat Project",
+  "description": "",
+  "version": "1.0.0",
+  "projectId": 1001
+}
